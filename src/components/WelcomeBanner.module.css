@@ -1,0 +1,76 @@
+.banner {
+    background: linear-gradient(135deg, #4F86F7 0%, #2563EB 100%);
+    /* Blue gradient */
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.greeting {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.username {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.featuredList {
+    display: flex;
+    gap: 16px;
+}
+
+.featuredCard {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 280px;
+    color: var(--text-main);
+}
+
+.featuredImage {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.featuredInfo h4 {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    margin-bottom: 4px;
+}
+
+.featuredInfo p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.moreCount {
+    background: white;
+    color: var(--primary);
+    width: 60px;
+    height: 76px;
+    /* Match card height approx */
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+}

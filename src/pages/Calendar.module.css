@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    gap: 40px;
+    height: calc(100vh - 100px);
+    /* Adjust for header/padding */
+}
+
+.calendarSection {
+    flex: 1;
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.monthSelector,
+.yearSelector {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.chevron {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+    text-align: center;
+}
+
+.dayLabel {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.dateCell {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+.dateCell:hover:not(.selected) {
+    background-color: var(--background);
+}
+
+.selected {
+    background-color: #E0E7FF;
+    /* Light indigo */
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.eventIndicator {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.eventIndicator img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.eventListSection {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectedDateHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.dateBadge {
+    background-color: #E0E7FF;
+    color: var(--primary);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.dateNum {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.dateMonth {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.fullDate {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.eventCount {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.eventList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+}
