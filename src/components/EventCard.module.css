@@ -6,6 +6,7 @@
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
     border: 1px solid transparent;
+    text-decoration: none;
 }
 
 .card:hover {

@@ -16,22 +16,48 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
     padding: 0 20px;
 }
 
-.monthSelector,
-.yearSelector {
-    font-size: 24px;
-    font-weight: 700;
+.navBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 1px solid #E5E7EB;
+    background: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
-    cursor: pointer;
+    justify-content: center;
+    transition: var(--transition);
 }
 
-.chevron {
-    font-size: 16px;
+.navBtn:hover {
+    background-color: var(--background);
+    border-color: var(--primary);
+}
+
+.navBtn i {
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.monthYear {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.monthName {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.yearName {
+    font-size: 20px;
+    font-weight: 600;
     color: var(--text-secondary);
 }
 
@@ -135,4 +161,35 @@
     flex-direction: column;
     gap: 16px;
     overflow-y: auto;
+}
+
+.today {
+    border: 2px solid var(--primary);
+}
+
+.eventDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.noEvents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.noEvents i {
+    font-size: 48px;
+    opacity: 0.3;
+}
+
+.noEvents p {
+    font-size: 16px;
 }

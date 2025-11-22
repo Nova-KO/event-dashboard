@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './CategoryFilter.module.css'
 
 const categories = [
-    { id: 'all', label: 'All Events', icon: '📅' },
-    { id: 'music', label: 'Music', icon: '🎸' },
-    { id: 'food', label: 'Food Festival', icon: '🍟' },
-    { id: 'tech', label: 'Tech', icon: '🎮' },
-    { id: 'art', label: 'Art & Craft', icon: '🎨' },
-    { id: 'nature', label: 'Nature', icon: '🌷' },
+    { id: 'all', label: 'All Events', icon: 'lni lni-grid-alt' },
+    { id: 'music', label: 'Music', icon: 'lni lni-music' },
+    { id: 'food', label: 'Food Festival', icon: 'lni lni-dinner' },
+    { id: 'tech', label: 'Tech', icon: 'lni lni-display' },
+    { id: 'art', label: 'Art & Craft', icon: 'lni lni-brush' },
+    { id: 'nature', label: 'Nature', icon: 'lni lni-leaf' },
 ]
 
-const CategoryFilter = () => {
-    const [active, setActive] = useState('all')
-
+const CategoryFilter = ({ activeCategory, setActiveCategory }) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
@@ -24,10 +22,10 @@ const CategoryFilter = () => {
                 {categories.map(cat => (
                     <button
                         key={cat.id}
-                        className={`${styles.pill} ${active === cat.id ? styles.active : ''}`}
-                        onClick={() => setActive(cat.id)}
+                        className={`${styles.pill} ${activeCategory === cat.id ? styles.active : ''}`}
+                        onClick={() => setActiveCategory(cat.id)}
                     >
-                        <span className={styles.icon}>{cat.icon}</span>
+                        <i className={`${cat.icon} ${styles.icon}`}></i>
                         {cat.label}
                     </button>
                 ))}

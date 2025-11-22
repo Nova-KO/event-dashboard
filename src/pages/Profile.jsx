@@ -6,48 +6,48 @@ const Profile = () => {
     const upcomingEvents = [
         {
             id: 1,
-            title: "International Music Festival | 'Bangalore'",
+            title: "The Homecoming Tour | Sid Sriram Live",
             date: "22 Jan - 24 Jan",
             location: "Cultural Hall, Brookefield",
             image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80",
         },
         {
             id: 2,
-            title: "International Music Festival | 'Bangalore'",
-            date: "22 Jan - 24 Jan",
-            location: "Cultural Hall, Brookefield",
-            image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+            title: "Tech Conference 2024",
+            date: "10 Jun - 12 Jun",
+            location: "Convention Center",
+            image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80",
         },
         {
             id: 3,
-            title: "International Music Festival | 'Bangalore'",
-            date: "22 Jan - 24 Jan",
-            location: "Cultural Hall, Brookefield",
-            image: "https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&w=800&q=80",
+            title: "Food Carnival",
+            date: "15 Aug - 16 Aug",
+            location: "City Park",
+            image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
         }
     ]
 
     const pastEvents = [
         {
             id: 4,
-            title: "International Music Festival | 'Bangalore'",
-            date: "22 Jan - 24 Jan",
-            location: "Cultural Hall, Brookefield",
-            image: "https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=800&q=80",
+            title: "Jazz Night",
+            date: "20 Oct - 20 Oct",
+            location: "Blue Note Club",
+            image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80",
         },
         {
             id: 5,
-            title: "International Music Festival | 'Bangalore'",
-            date: "22 Jan - 24 Jan",
-            location: "Cultural Hall, Brookefield",
-            image: "https://images.unsplash.com/photo-1459749411177-0473ef716175?auto=format&fit=crop&w=800&q=80",
+            title: "Art Exhibition",
+            date: "01 Sep - 05 Sep",
+            location: "Modern Art Gallery",
+            image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80",
         },
         {
             id: 6,
-            title: "International Music Festival | 'Bangalore'",
-            date: "22 Jan - 24 Jan",
-            location: "Cultural Hall, Brookefield",
-            image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
+            title: "Startup Summit",
+            date: "12 Nov - 14 Nov",
+            location: "Tech Park",
+            image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80",
         }
     ]
 
@@ -62,16 +62,20 @@ const Profile = () => {
                     />
                     <div className={styles.userDetails}>
                         <h1 className={styles.name}>John Doe</h1>
-                        <p className={styles.email}>Janedoe@gmail.com</p>
+                        <p className={styles.email}>johndoe@example.com</p>
                     </div>
                 </div>
-                <button className={styles.editBtn}>✏️</button>
+                <button className={styles.editBtn}>
+                    <i className="lni lni-pencil"></i>
+                </button>
             </div>
 
             <div className={styles.section}>
                 <div className={styles.sectionHeader}>
                     <h2>Upcoming Events</h2>
-                    <button className={styles.viewAll}>View All ⌄</button>
+                    <button className={styles.viewAll}>
+                        View All <i className="lni lni-chevron-right"></i>
+                    </button>
                 </div>
                 <div className={styles.grid}>
                     {upcomingEvents.map(event => (
@@ -83,7 +87,9 @@ const Profile = () => {
             <div className={styles.section}>
                 <div className={styles.sectionHeader}>
                     <h2>Past Events</h2>
-                    <button className={styles.viewAll}>View All ⌄</button>
+                    <button className={styles.viewAll}>
+                        View All <i className="lni lni-chevron-right"></i>
+                    </button>
                 </div>
                 <div className={styles.grid}>
                     {pastEvents.map(event => (

@@ -11,8 +11,12 @@ const EventCard = ({ event }) => {
             <div className={styles.content}>
                 <h3 className={styles.title}>{event.title}</h3>
                 <div className={styles.meta}>
-                    <span className={styles.date}>📅 {event.date}</span>
-                    <span className={styles.location}>📍 {event.location}</span>
+                    <span className={styles.date}>
+                        <i className="lni lni-calendar"></i> {event.date}
+                    </span>
+                    <span className={styles.location}>
+                        <i className="lni lni-map-marker"></i> {event.location}
+                    </span>
                 </div>
             </div>
         </Link>

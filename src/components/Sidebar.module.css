@@ -13,9 +13,14 @@
 .logo {
     font-size: 24px;
     font-weight: 800;
-    margin-bottom: 48px;
-    padding-left: 12px;
+    margin-bottom: 40px;
+    padding: 0 12px;
     letter-spacing: 1px;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
 }
 
 .nav {
@@ -35,6 +40,10 @@
     font-weight: 500;
     transition: var(--transition);
     text-align: left;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .item:hover {
@@ -57,4 +66,23 @@
     height: 1px;
     background-color: rgba(255, 255, 255, 0.1);
     margin: 24px 0;
+}
+
+.item:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.item:disabled:hover {
+    background-color: transparent;
+}
+
+.comingSoon {
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
 }
